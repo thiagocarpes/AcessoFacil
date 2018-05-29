@@ -1,0 +1,24 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0">
+	<persistence-unit name="acessofacil">
+		<!-- provedor/implementacao do JPA -->
+		<provider>org.hibernate.ejb.HibernatePersistence</provider> 
+		<!-- entidade mapeada -->
+		<class>br.com.acessofacil.entity.Avaliacao</class>
+		<class>br.com.acessofacil.entity.Categoria</class>
+		<class>br.com.acessofacil.entity.Comentario</class>
+		<class>br.com.acessofacil.entity.Estabelecimento</class>
+		<class>br.com.acessofacil.entity.Questoes</class>
+		<class>br.com.acessofacil.entity.Usuario</class>
+		<properties>
+		<!-- dados da conexao foram migrados para o spring-context.xml -->
+			<!-- propriedades do hibernate -->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+			<property name="hibernate.show_sql" value="false" />
+			<property name="hibernate.format_sql" value="true" /> 
+		</properties>
+	</persistence-unit>
+</persistence>
